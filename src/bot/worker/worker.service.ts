@@ -8,6 +8,6 @@ export class WorkerService {
   async mainPage(message: TelegramBot.Message) {
     const chatId = message.chat.id;
 
-    await this.bot.sendMessage(chatId, 'Воркер');
+    await this.bot.sendMessage(chatId, 'Вы не админ');
   }
 }

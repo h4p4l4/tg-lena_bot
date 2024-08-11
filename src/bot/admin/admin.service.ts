@@ -9,14 +9,14 @@ export class AdminService {
   async mainPage(message: TelegramBot.Message) {
     const chatId = message.chat.id;
 
-    await this.bot.sendMessage(chatId, 'Бугор', mainPageKeyboard);
+    await this.bot.sendMessage(chatId, 'Главная', mainPageKeyboard);
   }
 
   async navigateToMainPage(callbackQuery: TelegramBot.CallbackQuery) {
     const chatId = callbackQuery.message.chat.id;
     const messageId = callbackQuery.message.message_id;
 
-    await this.bot.editMessageText('Бугор', {
+    await this.bot.editMessageText('Главная', {
       chat_id: chatId,
       message_id: messageId,
       ...mainPageKeyboard,

@@ -13,7 +13,7 @@ import { City } from './city.entity';
 
 @Entity()
 @Unique(['personal_code'])
-export class Whore {
+export class Person {
   @PrimaryGeneratedColumn()
   id: number;
 

@@ -5,7 +5,7 @@ import {
   PrimaryGeneratedColumn,
   Unique,
 } from 'typeorm';
-import { Whore } from './whore.entity';
+import { Person } from './person.entity';
 
 @Entity()
 @Unique(['url'])
@@ -16,6 +16,6 @@ export class Image {
   @Column()
   url: string;
 
-  @ManyToOne(() => Whore, (whore) => whore.images)
-  whore: Whore;
+  @ManyToOne(() => Person, (whore) => whore.images)
+  whore: Person;
 }

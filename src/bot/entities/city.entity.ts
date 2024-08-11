@@ -5,7 +5,7 @@ import {
   PrimaryGeneratedColumn,
   Unique,
 } from 'typeorm';
-import { Whore } from './whore.entity';
+import { Person } from './person.entity';
 
 @Entity()
 @Unique(['name'])
@@ -16,6 +16,6 @@ export class City {
   @Column()
   name: string;
 
-  @OneToMany(() => Whore, (whore) => whore.city)
-  whores: Whore[];
+  @OneToMany(() => Person, (whore) => whore.city)
+  whores: Person[];
 }
